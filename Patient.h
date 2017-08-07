@@ -53,16 +53,16 @@ public:
 	string getCareCard() const;
 
 	// Description: Sets the patient's name.
-	void setName(const string aName);
+	void setName(string aName);
 
 	// Description: Sets the patient's address.
-	void setAddress(const string anAddress);
+	void setAddress(string anAddress);
 
 	// Description: Sets the patient's phone number.
-	void setPhone(const string aPhone);
+	void setPhone(string aPhone);
 
 	// Description: Sets the patient's email.
-	void setEmail(const string anEmail);
+	void setEmail(string anEmail);
 
 	// Overloaded Operators
 	// Description: Comparison operator. Compares "this" Patient object with "rhs" Patient object.

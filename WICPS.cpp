@@ -24,7 +24,7 @@ void add(List& patients){
 }
 
 void remove(List& patients){
-    string input = "";
+    string input;
     cout << "Please enter the 10-digit care-card number of the patient to be removed" << endl;
     cout << ">> ";
     cin >> input;
@@ -41,7 +41,7 @@ void remove(List& patients){
 
 void update(List& patients){
     // first find the patient
-    string input = "";
+    string input;
     cout << "Please enter a 10-digit care-card number" << endl;
     cout << ">> ";
     cin >> input;
@@ -50,7 +50,7 @@ void update(List& patients){
     Patient * patient = patients.search(patToFind);
 
     // Now deal with if the user was found or not
-    if (!patient) {
+    if (patient == NULL) {
         cout << "Unable to find patient in the database, try again\n" << endl;
     } else {
 
@@ -59,7 +59,7 @@ void update(List& patients){
         while (not editDone) {
 
             char editInput = 0;
-            string inputValue = "";
+            string inputValue;
 
             cout << "What would you like to change?" << endl;
             cout << "(n) Name" << endl;
@@ -109,14 +109,14 @@ void update(List& patients){
 }
 
 void search(List& patients){
-    string input = "";
+    string input;
     cout << "Please enter a 10-digit care-card number to find the patient" << endl;
     cout << ">> ";
     cin >> input;
 
     Patient patToFind = Patient(input);
     Patient * patient = patients.search(patToFind);
-    if (!patient) {
+    if (patient == NULL) {
         cout << "Unable to find patient in the database" << endl;
     } else {
         cout << "This patient does exist in the database" << endl;

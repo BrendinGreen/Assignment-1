@@ -17,8 +17,7 @@
 using namespace std;
 
 // Default constructor
-List::List() : elementCount(0), capacity(List::MAX_ELEMENTS) {
-}
+List::List() : elementCount(0), capacity(List::MAX_ELEMENTS) {}
 
 // Description: Returns the total element count currently stored in List.
 int List::getElementCount() const {
@@ -42,7 +41,8 @@ bool List::insert(const Patient& newElement){
 
                 elementCount++;
                 return true;
-            } else if (elements[i] == newElement) {
+            }
+            if (elements[i] == newElement) {
                 return false;
             }
         }
